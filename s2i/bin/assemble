@@ -1,0 +1,7 @@
+#!/bin/bash 
+SRC_DIR=$S2I_DESTINATION/src/artifacts/src
+cp -f $SRC_DIR/src/main/liberty/config/server.xml /config/server.xml
+cp -f $SRC_DIR/src/main/liberty/config/server.env /config/server.env 
+cp -f $SRC_DIR/src/main/liberty/config/jvm.options /config/jvm.options 
+cp -f $SRC_DIR/target/*.war /config/apps/ 
+configure.sh
